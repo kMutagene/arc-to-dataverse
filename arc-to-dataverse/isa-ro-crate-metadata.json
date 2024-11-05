@@ -1,0 +1,419 @@
+{
+  "@id": "./",
+  "@type": "Investigation",
+  "additionalType": "Investigation",
+  "identifier": "WheatCultivarPhenotyping",
+  "filename": "isa.investigation.xlsx",
+  "title": "Field Phenotyping of Ten Wheat Cultivars under Elevated CO2 Shows Seasonal Differences in Chlorophyll Fluorescence, Plant Height and Vegetation Indices",
+  "description": "The experimental data consist of the LIFT, PhenoCam, UAV, yield and environmental data.",
+  "publicReleaseDate": "2023-12-11",
+  "publications": [
+    {
+      "@id": "doi:10.26165/JUELICH-DATA/QJIY7C",
+      "@type": "Publication",
+      "doi": "doi:10.26165/JUELICH-DATA/QJIY7C",
+      "authorList": [
+        {
+          "@type": "Person",
+          "name": "Oliver Knopf",
+          "@context": {
+            "sdo": "http://schema.org/",
+            "Person": "sdo:Person",
+            "name": "sdo:name"
+          }
+        }
+      ],
+      "@context": {
+        "sdo": "http://schema.org/",
+        "Publication": "sdo:ScholarlyArticle",
+        "pubMedID": "sdo:url",
+        "doi": "sdo:sameAs",
+        "title": "sdo:headline",
+        "status": "sdo:creativeWorkStatus",
+        "authorList": "sdo:author",
+        "comments": "sdo:disambiguatingDescription"
+      }
+    }
+  ],
+  "people": [
+    {
+      "@id": "#Oliver_Knopf",
+      "@type": "Person",
+      "orcid": "0000-0003-3242-1531",
+      "firstName": "Oliver",
+      "lastName": "Knopf",
+      "affiliation": {
+        "@type": "Organization",
+        "@id": "#Organization_Forschungszentrum_Jülich",
+        "name": "Forschungszentrum Jülich",
+        "@context": {
+          "sdo": "http://schema.org/",
+          "Organization": "sdo:Organization",
+          "name": "sdo:name"
+        }
+      },
+      "@context": {
+        "sdo": "http://schema.org/",
+        "Person": "sdo:Person",
+        "orcid": "sdo:identifier",
+        "firstName": "sdo:givenName",
+        "lastName": "sdo:familyName",
+        "midInitials": "sdo:additionalName",
+        "email": "sdo:email",
+        "address": "sdo:address",
+        "phone": "sdo:telephone",
+        "fax": "sdo:faxNumber",
+        "comments": "sdo:disambiguatingDescription",
+        "roles": "sdo:jobTitle",
+        "affiliation": "sdo:affiliation"
+      }
+    }
+  ],
+  "studies": [
+    {
+      "@id": "#study/MyStudy",
+      "@type": [
+          "Study"
+      ],
+      "additionalType": "Study",
+      "identifier": "MyStudy",
+      "filename": "studies/MyStudy/isa.study.xlsx",
+      "processSequence": [
+          {
+              "@id": "#Process_CropLightMeasurement",
+              "@type": [
+                  "Process"
+              ],
+              "name": "CropLightMeasurement",
+              "parameterValues": [
+                  {
+                      "@id": "#ProcessParameterValue/growth time=174day",
+                      "@type": "PropertyValue",
+                      "additionalType": "ProcessParameterValue",
+                      "category": "growth time",
+                      "categoryCode": "DPBO:0000100",
+                      "value": 174,
+                      "unit": "day",
+                      "unitCode": "UO:0000033",
+                      "@context": {
+                          "sdo": "http://schema.org/",
+                          "additionalType": "sdo:additionalType",
+                          "alternateName": "sdo:alternateName",
+                          "measurementMethod": "sdo:measurementMethod",
+                          "description": "sdo:description",
+                          "category": "sdo:name",
+                          "categoryCode": "sdo:propertyID",
+                          "value": "sdo:value",
+                          "valueCode": "sdo:valueReference",
+                          "unit": "sdo:unitText",
+                          "unitCode": "sdo:unitCode",
+                          "comments": "sdo:disambiguatingDescription"
+                      }
+                  }
+              ],
+              "inputs": [
+                  {
+                      "@id": "#Sample_MyCrop1",
+                      "@type": [
+                          "Sample"
+                      ],
+                      "name": "MyCrop1",
+                      "additionalProperties": [
+                          {
+                              "@id": "#MaterialAttributeValue/variety (taxa)=Moschus berezovskii",
+                              "@type": "PropertyValue",
+                              "additionalType": "MaterialAttributeValue",
+                              "category": "variety (taxa)",
+                              "categoryCode": "c:1423211760123",
+                              "value": "Moschus berezovskii",
+                              "valueCode": "NCBITaxon:68408",
+                              "@context": {
+                                  "sdo": "http://schema.org/",
+                                  "additionalType": "sdo:additionalType",
+                                  "alternateName": "sdo:alternateName",
+                                  "measurementMethod": "sdo:measurementMethod",
+                                  "description": "sdo:description",
+                                  "category": "sdo:name",
+                                  "categoryCode": "sdo:propertyID",
+                                  "value": "sdo:value",
+                                  "valueCode": "sdo:valueReference",
+                                  "unit": "sdo:unitText",
+                                  "unitCode": "sdo:unitCode",
+                                  "comments": "sdo:disambiguatingDescription"
+                              }
+                          },
+                          {
+                              "@id": "#MaterialAttributeValue/Organism=Triticum aestivum",
+                              "@type": "PropertyValue",
+                              "additionalType": "MaterialAttributeValue",
+                              "category": "Organism",
+                              "categoryCode": "NCIT:C14250",
+                              "value": "Triticum aestivum",
+                              "valueCode": "NCBITaxon:4565",
+                              "@context": {
+                                  "sdo": "http://schema.org/",
+                                  "additionalType": "sdo:additionalType",
+                                  "alternateName": "sdo:alternateName",
+                                  "measurementMethod": "sdo:measurementMethod",
+                                  "description": "sdo:description",
+                                  "category": "sdo:name",
+                                  "categoryCode": "sdo:propertyID",
+                                  "value": "sdo:value",
+                                  "valueCode": "sdo:valueReference",
+                                  "unit": "sdo:unitText",
+                                  "unitCode": "sdo:unitCode",
+                                  "comments": "sdo:disambiguatingDescription"
+                              }
+                          }
+                      ],
+                      "@context": {
+                          "sdo": "http://schema.org/",
+                          "bio": "https://bioschemas.org/",
+                          "Sample": "bio:Sample",
+                          "name": "sdo:name",
+                          "additionalProperties": "bio:additionalProperty"
+                      }
+                  },
+                  {
+                      "@id": "#Sample_MyCrop2",
+                      "@type": [
+                          "Sample"
+                      ],
+                      "name": "MyCrop2",
+                      "additionalProperties": [
+                          {
+                              "@id": "#MaterialAttributeValue/variety (taxa)=Arabidopsis thaliana",
+                              "@type": "PropertyValue",
+                              "additionalType": "MaterialAttributeValue",
+                              "category": "variety (taxa)",
+                              "categoryCode": "c:1423211760123",
+                              "value": "Arabidopsis thaliana",
+                              "valueCode": "NCBITaxon:3702",
+                              "@context": {
+                                  "sdo": "http://schema.org/",
+                                  "additionalType": "sdo:additionalType",
+                                  "alternateName": "sdo:alternateName",
+                                  "measurementMethod": "sdo:measurementMethod",
+                                  "description": "sdo:description",
+                                  "category": "sdo:name",
+                                  "categoryCode": "sdo:propertyID",
+                                  "value": "sdo:value",
+                                  "valueCode": "sdo:valueReference",
+                                  "unit": "sdo:unitText",
+                                  "unitCode": "sdo:unitCode",
+                                  "comments": "sdo:disambiguatingDescription"
+                              }
+                          },
+                          {
+                              "@id": "#MaterialAttributeValue/Organism=Triticum aestivum",
+                              "@type": "PropertyValue",
+                              "additionalType": "MaterialAttributeValue",
+                              "category": "Organism",
+                              "categoryCode": "NCIT:C14250",
+                              "value": "Triticum aestivum",
+                              "valueCode": "NCBITaxon:4565",
+                              "@context": {
+                                  "sdo": "http://schema.org/",
+                                  "additionalType": "sdo:additionalType",
+                                  "alternateName": "sdo:alternateName",
+                                  "measurementMethod": "sdo:measurementMethod",
+                                  "description": "sdo:description",
+                                  "category": "sdo:name",
+                                  "categoryCode": "sdo:propertyID",
+                                  "value": "sdo:value",
+                                  "valueCode": "sdo:valueReference",
+                                  "unit": "sdo:unitText",
+                                  "unitCode": "sdo:unitCode",
+                                  "comments": "sdo:disambiguatingDescription"
+                              }
+                          }
+                      ],
+                      "@context": {
+                          "sdo": "http://schema.org/",
+                          "bio": "https://bioschemas.org/",
+                          "Sample": "bio:Sample",
+                          "name": "sdo:name",
+                          "additionalProperties": "bio:additionalProperty"
+                      }
+                  },
+                  {
+                      "@id": "#Sample_MyCrop3",
+                      "@type": [
+                          "Sample"
+                      ],
+                      "name": "MyCrop3",
+                      "additionalProperties": [
+                          {
+                              "@id": "#MaterialAttributeValue/variety (taxa)=El Paso County, TX",
+                              "@type": "PropertyValue",
+                              "additionalType": "MaterialAttributeValue",
+                              "category": "variety (taxa)",
+                              "categoryCode": "c:1423211760123",
+                              "value": "El Paso County, TX",
+                              "valueCode": "NCIT:C110281",
+                              "@context": {
+                                  "sdo": "http://schema.org/",
+                                  "additionalType": "sdo:additionalType",
+                                  "alternateName": "sdo:alternateName",
+                                  "measurementMethod": "sdo:measurementMethod",
+                                  "description": "sdo:description",
+                                  "category": "sdo:name",
+                                  "categoryCode": "sdo:propertyID",
+                                  "value": "sdo:value",
+                                  "valueCode": "sdo:valueReference",
+                                  "unit": "sdo:unitText",
+                                  "unitCode": "sdo:unitCode",
+                                  "comments": "sdo:disambiguatingDescription"
+                              }
+                          },
+                          {
+                              "@id": "#MaterialAttributeValue/Organism=Triticum aestivum",
+                              "@type": "PropertyValue",
+                              "additionalType": "MaterialAttributeValue",
+                              "category": "Organism",
+                              "categoryCode": "NCIT:C14250",
+                              "value": "Triticum aestivum",
+                              "valueCode": "NCBITaxon:4565",
+                              "@context": {
+                                  "sdo": "http://schema.org/",
+                                  "additionalType": "sdo:additionalType",
+                                  "alternateName": "sdo:alternateName",
+                                  "measurementMethod": "sdo:measurementMethod",
+                                  "description": "sdo:description",
+                                  "category": "sdo:name",
+                                  "categoryCode": "sdo:propertyID",
+                                  "value": "sdo:value",
+                                  "valueCode": "sdo:valueReference",
+                                  "unit": "sdo:unitText",
+                                  "unitCode": "sdo:unitCode",
+                                  "comments": "sdo:disambiguatingDescription"
+                              }
+                          }
+                      ],
+                      "@context": {
+                          "sdo": "http://schema.org/",
+                          "bio": "https://bioschemas.org/",
+                          "Sample": "bio:Sample",
+                          "name": "sdo:name",
+                          "additionalProperties": "bio:additionalProperty"
+                      }
+                  }
+              ],
+              "outputs": [
+                  {
+                      "@id": "MyDataFile.xlsx",
+                      "@type": [
+                          "Data"
+                      ],
+                      "name": "MyDataFile.xlsx",
+                      "type": "Raw Data File",
+                      "@context": {
+                          "sdo": "http://schema.org/",
+                          "Data": "sdo:MediaObject",
+                          "type": "sdo:disambiguatingDescription",
+                          "encodingFormat": "sdo:encodingFormat",
+                          "usageInfo": "sdo:usageInfo",
+                          "name": "sdo:name",
+                          "comments": "sdo:comment"
+                      }
+                  },
+                  {
+                      "@id": "MyDataFile.xlsx",
+                      "@type": [
+                          "Data"
+                      ],
+                      "name": "MyDataFile.xlsx",
+                      "type": "Raw Data File",
+                      "@context": {
+                          "sdo": "http://schema.org/",
+                          "Data": "sdo:MediaObject",
+                          "type": "sdo:disambiguatingDescription",
+                          "encodingFormat": "sdo:encodingFormat",
+                          "usageInfo": "sdo:usageInfo",
+                          "name": "sdo:name",
+                          "comments": "sdo:comment"
+                      }
+                  },
+                  {
+                      "@id": "MyDataFile.xlsx",
+                      "@type": [
+                          "Data"
+                      ],
+                      "name": "MyDataFile.xlsx",
+                      "type": "Raw Data File",
+                      "@context": {
+                          "sdo": "http://schema.org/",
+                          "Data": "sdo:MediaObject",
+                          "type": "sdo:disambiguatingDescription",
+                          "encodingFormat": "sdo:encodingFormat",
+                          "usageInfo": "sdo:usageInfo",
+                          "name": "sdo:name",
+                          "comments": "sdo:comment"
+                      }
+                  }
+              ],
+              "@context": {
+                  "sdo": "http://schema.org/",
+                  "bio": "https://bioschemas.org/",
+                  "Process": "bio:LabProcess",
+                  "name": "sdo:name",
+                  "executesProtocol": "bio:executesLabProtocol",
+                  "parameterValues": "bio:parameterValue",
+                  "performer": "sdo:agent",
+                  "date": "sdo:endTime",
+                  "inputs": "sdo:object",
+                  "outputs": "sdo:result",
+                  "comments": "sdo:disambiguatingDescription"
+              }
+          }
+      ],
+      "@context": {
+          "sdo": "http://schema.org/",
+          "Study": "sdo:Dataset",
+          "identifier": "sdo:identifier",
+          "title": "sdo:headline",
+          "additionalType": "sdo:additionalType",
+          "description": "sdo:description",
+          "submissionDate": "sdo:dateCreated",
+          "publicReleaseDate": "sdo:datePublished",
+          "publications": "sdo:citation",
+          "people": "sdo:creator",
+          "assays": "sdo:hasPart",
+          "filename": "sdo:alternateName",
+          "comments": "sdo:comment",
+          "processSequence": "sdo:about",
+          "studyDesignDescriptors": "arc:ARC#ARC_00000037"
+      }
+    }
+  ],
+  "comments": [
+    {
+      "@id": "#Comment_Subject_Agricultural_Sciences",
+      "@type": "Comment",
+      "name": "Subject",
+      "value": "Agricultural Sciences",
+      "@context": {
+        "sdo": "http://schema.org/",
+        "Comment": "sdo:Comment",
+        "name": "sdo:name",
+        "value": "sdo:text"
+      }
+    }
+  ],
+  "@context": {
+    "sdo": "http://schema.org/",
+    "Investigation": "sdo:Dataset",
+    "identifier": "sdo:identifier",
+    "title": "sdo:headline",
+    "additionalType": "sdo:additionalType",
+    "description": "sdo:description",
+    "submissionDate": "sdo:dateCreated",
+    "publicReleaseDate": "sdo:datePublished",
+    "publications": "sdo:citation",
+    "people": "sdo:creator",
+    "studies": "sdo:hasPart",
+    "ontologySourceReferences": "sdo:mentions",
+    "comments": "sdo:comment",
+    "filename": "sdo:alternateName"
+  }
+}
