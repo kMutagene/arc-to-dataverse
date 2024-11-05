@@ -1,0 +1,377 @@
+{
+	"$schema": "http://json-schema.org/draft-04/schema",
+	"title" : "FAIRagro Minimal Metadata Schema",
+	"description" : "JSON-schema representing the FAIRagro Minimal Metadata Schema",
+	"type" : "object",
+	"version":"0.3",
+	"versionDate":"2024-10-07",
+	"required":["citation"],
+	"properties" :{
+		"identifier":{
+			"type": "string",
+			"description":"Internal identifier for the dataset. It is automatically set by the search portal."
+		},
+		"citation":{
+			"type":"object",
+			"required":["otherId", "title", "author", "datasetContact","dsDescription","subject"],
+			"properties":{
+				"otherId":{
+					"type":"array",
+					"description":"Another unique identifier for the Dataset (e.g. producer's or another repository's identifier)",
+					"items":{
+						"type":"object",
+						"properties":{
+							"otherIdValue":{
+								"type":"string",
+								"description":"Another identifier uniquely identifies the Dataset"
+							},
+							"otherIdAgency":{
+								"type":"string",
+								"description":"The name of the agency that generated the other identifier"
+							}
+						}
+					}
+				},
+				"title":{
+					"type":"string",
+					"description":"The main title of the Dataset"
+				},
+				"author":{
+					"type":"array",
+					"description":"The entity, e.g. a person or organization, that created the Dataset",
+					"items":{
+						"type":"object",
+						"properties":{
+							"authorName":{
+								"type":"string",
+								"description":"The name of the author, such as the person's name or the name of an organization"
+							},
+							"authorAffiliation":{
+								"type":"string",
+								"description":"The name of the entity affiliated with the author, e.g. an organization's name"
+							},
+							"authorIdentifier":{
+								"type":"string",
+								"description":"Uniquely identifies the author when paired with an identifier type"
+							},
+							"authorIdentifierScheme":{
+								"type":"string",
+								"description":"The type of identifier that uniquely identifies the author (e.g. ORCID, ISNI)"
+							}
+						}
+					}
+				},
+				"contributor":{
+					"type":"array",
+					"description":"The entity, such as a person or organization, responsible for collecting, managing, or otherwise contributing to the development of the Dataset",
+					"items":{
+						"type":"object",
+						"properties":{
+							"contributorName":{
+								"type":"string",
+								"description":"The name of the contributor, e.g. the person's name or the name of an organization"
+							},
+							"contributorType":{
+								"type":"string",
+								"description":"Indicates the type of contribution made to the dataset"
+							}
+						}
+					}
+				},
+				"datasetContact":{
+					"type":"array",
+					"description":"The entity, e.g. a person or organization, that users of the Dataset can contact with questions",
+					"items":{
+						"type":"object",
+						"required":["datasetContactEmail"],
+						"properties":{
+							"datasetContactName":{
+								"type":"string",
+								"description":"The name of the point of contact, e.g. the person's name or the name of an organization"
+							},
+							"datasetContactAffiliation":{
+								"type":"string",
+								"description":"The name of the entity affiliated with the point of contact, e.g. an organization's name"
+							},
+							"datasetContactEmail":{
+								"type":"string",
+								"description":"The point of contact's email address"
+							}
+						}
+					}
+				},
+				"dsDescription":{
+					"type":"array",
+					"description":"A summary describing the purpose, nature, and scope of the Dataset",
+					"required":["dsDescriptionValue"],
+					"items":{
+						"type":"object",
+						"properties":{
+							"dsDescriptionValue":{
+								"type":"string",
+								"description":"A summary describing the purpose, nature, and scope of the Dataset"
+							}
+						}
+					}
+				},
+				"subject":{
+					"type":"array",
+					"description":"The area of study relevant to the Dataset",
+					"items":{
+						"type":"string"
+					}
+				},
+				"keyword":{
+					"type":"array",
+					"description":"A key term that describes an important aspect of the Dataset and information about any controlled vocabulary used",
+					"items":{
+						"type":"object",
+						"properties":{
+							"keywordValue":{
+								"type":"string",
+								"description":"A key term that describes important aspects of the Dataset"
+							},
+							"keywordVocabulary":{
+								"type":"string",
+								"description":"The controlled vocabulary used for the keyword term (e.g. LCSH, MeSH)"
+							},
+							"keywordVocabularyURI":{
+								"type":"string",
+								"description":"The URL where one can access information about the term's controlled vocabulary"
+							}
+						}
+					}
+				},
+				"language":{
+					"type":"array",
+					"description":"A language that the Dataset's files is written in",
+					"items":{
+						"type":"string"
+					}
+				},
+				"productionDate":{
+					"type":"string",
+					"description":"The date when the data were produced (not distributed, published, or archived)"
+				},
+				"distributionDate":{
+					"type":"string",
+					"description":"The date when the Dataset was made available for distribution/presentation"
+				},
+				"publication":{
+					"type":"array",
+					"description":"The article or report that uses the data in the Dataset. The full list of related publications will be displayed on the metadata tab",
+					"items":{
+						"type":"object",
+						"properties":{
+							"publicationCitation":{
+								"type":"string",
+								"description":"The full bibliographic citation for the related publication"
+							},
+							"publicationIDType":{
+								"type":"string",
+								"description":"The type of identifier that uniquely identifies a related publication"
+							},
+							"publicationIDNumber":{
+								"type":"string",
+								"description":"The identifier for a related publication"
+							},
+							"publicationURL":{
+								"type":"string",
+								"description":"The URL form of the identifier entered in the Identifier field, e.g. the DOI URL if a DOI was entered in the Identifier field. Used to display what was entered in the ID Type and ID Number fields as a link. If what was entered in the Identifier field has no URL form, the URL of the publication webpage is used, e.g. a journal article "
+							}
+						}
+					}
+				},
+				"relatedDatasets":{
+					"type":"array",
+					"description":"Information, such as a persistent ID or citation, about a related dataset, such as previous research on the Dataset's subject",
+					"items":{
+						"type":"string"
+					}
+				}
+			}
+		},
+		"generalExtended":{
+			"type":"object",
+			"properties": {
+				"resourceType": {
+					"type": "string",
+					"description": "The nature or genre of the resource."
+				},
+				"accessRights": {
+					"type": "array",
+					"description": "Information about who access the resource or an indication of its security status.",
+					"items": {
+						"type": "string"
+					}
+				},
+				"yieldMeasurementMethod": {
+					"type": "string",
+					"description": "Information on how the yield measurement of the dataset was generated."
+				},
+				"dataSource": {
+					"type": "string",
+					"description": "Experiment type or data source from which the dataset was generated."
+				},
+				"sourceRDI": {
+					"type": "object",
+					"description": "The original Research Data Infrastructure that the dataset was published by.",
+					"properties": {
+						"sourceRDIName": {
+							"type": "string",
+							"description": "The name of the original Research Data Infrastructure that the dataset was published by."
+						},
+						"sourceRDIURI": {
+							"type": "string",
+							"description": "The landing page of the original Research Data Infrastructure that the dataset was published by."
+						}
+					}
+				},
+				"sourceDatasetURI": {
+					"type": "string",
+					"description": "A link to the original landing page of the dataset."
+				}
+			}
+		},
+		"geographic":{
+			"type":"object",
+			"properties":{
+				"geographicCoverage":{
+					"type":"array",
+					"description":"Information on the geographic coverage of the data. Includes the total geographic scope of the data.",
+					"items":{
+						"type":"object",
+						"properties":{
+							"city":{
+								"type":"string",
+								"description":"The name of the city that the Dataset is about. Use GeoNames for correct spelling and avoid abbreviations."
+							},
+							"country":{
+								"type":"string",
+								"description":"The country or nation that the Dataset is about."
+							}
+						}
+					}
+				},
+				"geographicBoundingBox":{
+					"type":"array",
+					"description":"The fundamental geometric description for any Dataset that models geography is the geographic bounding box. It describes the minimum box, defined by west and east longitudes and north and south latitudes, which includes the largest geographic extent of the  Dataset's geographic coverage. This element is used in the first pass of a coordinate-based search. Inclusion of this element in the codebook is recommended, but is required if the bound polygon box is included.",
+					"items":{
+						"type":"object",
+						"properties":{
+							"westLongitude":{
+								"type":"string",
+								"description":"Westernmost coordinate delimiting the geographic extent of the Dataset. A valid range of values,  expressed in decimal degrees, is -180.0 <= West  Bounding Longitude Value <= 180.0."
+							},
+							"eastLongitude":{
+								"type":"string",
+								"description":"Easternmost coordinate delimiting the geographic extent of the Dataset. A valid range of values,  expressed in decimal degrees, is -180.0 <= East Bounding Longitude Value <= 180.0."
+							},
+							"northLongitude":{
+								"type":"string",
+								"description":"Northernmost coordinate delimiting the geographic extent of the Dataset. A valid range of values,  expressed in decimal degrees, is -90.0 <= North Bounding Latitude Value <= 90.0."
+							},
+							"southLongitude":{
+								"type":"string",
+								"description":"Southernmost coordinate delimiting the geographic extent of the Dataset. A valid range of values,  expressed in decimal degrees, is -90.0 <= South Bounding Latitude Value <= 90.0."
+							}
+						}
+					}
+				}
+			}
+		},
+		"crop":{
+			"type":"object",
+			"properties":{
+				"crop":{
+					"type":"array",
+					"description":"A specific crop entity that is part of the dataset.",
+					"items":{
+						"type":"object",
+						"properties":{
+							"cropSpecies":{
+								"type":"string",
+								"description":"Taxonomic crop species that is part of the dataset."
+							},
+							"cropSpeciesURI":{
+								"type":"string",
+								"description":"Reference to a resource (e.g. a terminology concept) representing a crop species that is part of the dataset."
+							},
+							"cropCultivar":{
+								"type":"string",
+								"description":"A plant type cultivated through human manipulation that is part of the dataset."
+							},
+							"cropCultivarURI":{
+								"type":"string",
+								"description":"Reference to a resource (e.g. a terminology concept) representing a crop cultivar that is part of the dataset."
+							},
+							"cropVariety":{
+								"type":"string",
+								"description":"A plant variety that is part of the dataset and that is a member of a defined group of plants, selected from within a species, with a common set of characteristics."
+							},
+							"cropVarietyURI":{
+								"type":"string",
+								"description":"Reference to a resource (e.g. a terminology concept) representing a crop variety that is part of the dataset."
+							},
+							"cropSowingPeriod":{
+								"type":"string",
+								"description":"A time period when the described crop was planted."
+							},
+							"cropResiduesRemoval":{
+								"type":"string",
+								"description":"Indicator if/how much residue of the described crop after harvest was removed."
+							},
+							"cropResiduesIncorporation":{
+								"type":"string",
+								"description":"Indicator if crop residue was incorporated into the soil after harvesting."
+							},
+							"cropResiduesBurning":{
+								"type":"string",
+								"description":"Indicator if crop residue was burned after harvesting."
+							}
+						}
+					}
+				}
+			}
+		},
+		"soil":{
+			"type":"object",
+			"properties":{
+				"soil":{
+					"type":"array",
+					"description":"A specific soil described in the dataset.",
+					"items":{
+						"type":"object",
+						"properties":{
+							"soilTexture":{
+								"type":"string",
+								"description":"Indication of relative contents of particles in the soil described in the dataset."
+							},
+							"soilTextureURI":{
+								"type":"string",
+								"description":"Reference to a resource (e.g. a terminology concept) representing a soil texture that is part of the dataset."
+							},
+							"soilInitialSamplingDate":{
+								"type":"string",
+								"description":"Date when a specific soil that is part of the dataset was sampled"
+							},
+							"soilBulkDensity":{
+								"type":"string",
+								"description":"The mass of material particles divided by the bulk volume"
+							},
+							"soilPH":{
+								"type":"string",
+								"description":"Hydrogen ion concentration in the soil"
+							},
+							"soilOrganicCarbon":{
+								"type":"string",
+								"description":"Percentual share of solid carbon in the soil"
+							}
+						}
+					}
+				}
+			}
+		}
+	},
+	"additionalProperties": false
+}

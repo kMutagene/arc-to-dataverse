@@ -1,0 +1,16 @@
+[tool.poetry]
+name = "arc-to-dataverse"
+version = "0.1.0"
+description = ""
+authors = ["Kevin Schneider <schneider.kev@outlook.de>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.12"
+arctrl = "^2.2.0"
+jsonschema = "^4.23.0"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
