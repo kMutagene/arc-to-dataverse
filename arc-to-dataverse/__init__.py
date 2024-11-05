@@ -1,7 +1,8 @@
 import json
 import inspect
+from enum import Enum
 from arctrl.arc import ARC
-from arctrl.Core.arc_types import Person
+from arctrl.Core.arc_types import Person, ArcInvestigation
 from jsonschema import validate
 
 def load_json_from_file(file_path):
@@ -38,6 +39,36 @@ def get_contacts(persons: list[Person]):
         if person.EMail
     ]
 
+class Subject(Enum):
+    Agricultural_Sciences = "Agricultural Sciences"
+    Arts_and_Humanities = "Arts and Humanities"
+    Astronomy_and_Astrophysics = "Astronomy and Astrophysics"
+    Business_and_Management = "Business and Management"
+    Chemistry = "Chemistry"
+    Computer_and_Information_Science = "Computer and Information Science"
+    Earth_and_Environmental_Sciences = "Earth and Environmental Sciences"
+    Engineering = "Engineering"
+    Law = "Law"
+    Mathematical_Sciences = "Mathematical Sciences"
+    Medicine_Health_and_Life_Sciences = "Medicine, Health and Life Sciences"
+    Physics = "Physics"
+    Social_Sciences = "Social Sciences"
+    Other = "Other"
+
+def get_subjects(inv: ArcInvestigation):
+    subjects = [
+        comment.Value 
+        for comment in inv.Comments 
+        if comment.Name == "Subject"
+        and comment.Value in [subject.value for subject in Subject]
+    ]
+    if len(subjects) == 0:
+        return [Subject.Other.value]
+    else:
+        return subjects
+    
+
+
 # mandatory fields on "citation": "otherId", "title", "author", "datasetContact","dsDescription","subject"
 out = {}
 out["citation"] = {}
@@ -45,8 +76,7 @@ out["citation"]["otherId"] = [{"otherIdValue": "#ARCDataHubId", "otherIdAgency":
 out["citation"]["title"] = arc.ISA.Title
 out["citation"]["author"] = [map_person_to_author(person) for person in arc.ISA.GetAllPersons()]
 out["citation"]["datasetContact"] = get_contacts(arc.ISA.GetAllPersons())
-out["citation"]["dsDescription"] = arc.ISA.Description
-out["citation"]["subject"] = [] # must match predefined enum
+out["citation"]["dsDescription"] = [{"dsDescriptionValue": arc.ISA.Description}]
+out["citation"]["subject"] = get_subjects(arc.ISA)
 
-print(out)
 validate(instance=out, schema=fairagro_minimal_metadata_block_schema)
