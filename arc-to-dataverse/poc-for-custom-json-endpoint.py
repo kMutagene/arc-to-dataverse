@@ -2,6 +2,7 @@ from arctrl.arc import ARC
 from arctrl.Core.arc_types import Person, ArcInvestigation
 from jsonschema import validate
 import json
+from arctrl.json import JsonController
 from enum import Enum
 from arctrl.arc import ARC
 from arctrl.Core.arc_types import Person, ArcInvestigation
@@ -23,8 +24,12 @@ def load_arc_from_rocrate_file (file_path):
 def load_inv_from_isa_rocrate_file (file_path):
     """Load Investigation from a RO-Crate file conforming to the ISA ro-crate profile."""
     with open(file_path, mode='r', encoding='utf-8') as f:
-        return read_inv_from_isa_rocate_string(f.read())
+        return JsonController.Investigation().from_rocrate_json_string(f.read())
 
+def load_std_from_isa_rocrate_file (file_path):
+    """Load Study from a RO-Crate file conforming to the ISA ro-crate profile."""
+    with open(file_path, mode='r', encoding='utf-8') as f:
+        return JsonController.Study().from_rocrate_json_string(f.read())
 
 fairagro_minimal_metadata_block_schema = load_json_from_file(r'C:\Users\schne\source\repos\kMutagene\arc-to-dataverse\arc-to-dataverse\fairagro_minimal_metadata_block_schema_v0.3.json')
 
