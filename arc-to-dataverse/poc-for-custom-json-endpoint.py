@@ -8,35 +8,14 @@ from arctrl.arc import ARC
 from arctrl.Core.arc_types import Person, ArcInvestigation
 from jsonschema import validate
 
-# transpiled function without top level wrapper, needs adjustments in arctrl
-from arctrl.JsonIO.investigation import ARCtrl_ArcInvestigation__ArcInvestigation_fromROCrateJsonString_Static_Z721C83C5 as read_inv_from_isa_rocate_string
+import domain
 
-def load_json_from_file(file_path):
-    """Load JSON data from a file."""
-    with open(file_path, mode='r', encoding='utf-8') as f:
-        return json.load(f)
-    
-def load_arc_from_rocrate_file (file_path):
-    """Load ARC from a RO-Crate file conforming to the ARC ro-crate profile."""
-    with open(file_path, mode='r', encoding='utf-8') as f:
-        return ARC.from_rocrate_json_string(f.read())
-
-def load_inv_from_isa_rocrate_file (file_path):
-    """Load Investigation from a RO-Crate file conforming to the ISA ro-crate profile."""
-    with open(file_path, mode='r', encoding='utf-8') as f:
-        return JsonController.Investigation().from_rocrate_json_string(f.read())
-
-def load_std_from_isa_rocrate_file (file_path):
-    """Load Study from a RO-Crate file conforming to the ISA ro-crate profile."""
-    with open(file_path, mode='r', encoding='utf-8') as f:
-        return JsonController.Study().from_rocrate_json_string(f.read())
-
-fairagro_minimal_metadata_block_schema = load_json_from_file(r'C:\Users\schne\source\repos\kMutagene\arc-to-dataverse\arc-to-dataverse\fairagro_minimal_metadata_block_schema_v0.3.json')
+fairagro_minimal_metadata_block_schema = domain.load_json_from_file(r'C:\Users\schne\source\repos\kMutagene\arc-to-dataverse\arc-to-dataverse\fairagro_minimal_metadata_block_schema_v0.3.json')
 
 # small test file loaded from an isa ro crate
-isa = load_inv_from_isa_rocrate_file(r'C:\Users\schne\source\repos\kMutagene\arc-to-dataverse\arc-to-dataverse\isa-ro-crate-metadata.json')
+isa = domain.load_inv_from_isa_rocrate_file(r'C:\Users\schne\source\repos\kMutagene\arc-to-dataverse\arc-to-dataverse\isa-ro-crate-metadata.json')
 # loaded from an arc ro crate
-arc = load_arc_from_rocrate_file(r'C:\Users\schne\source\repos\kMutagene\arc-to-dataverse\arc-to-dataverse\arc-ro-crate-metadata.json')
+arc = domain.load_arc_from_rocrate_file(r'C:\Users\schne\source\repos\kMutagene\arc-to-dataverse\arc-to-dataverse\arc-ro-crate-metadata.json')
 
 # print(arc.ISA)
 # print(isa)

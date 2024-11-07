@@ -7,9 +7,9 @@ readme = "README.md"
 
 [tool.poetry.dependencies]
 python = "^3.12"
-arctrl = "^2.2.0"
 jsonschema = "^4.23.0"
 fsspreadsheet = "^6.2.0"
+pydataverse = "^0.3.4"
 
 
 [build-system]
