@@ -59,6 +59,32 @@ files = [
 unicode-backport = ["unicodedata2"]
 
 [[package]]
+name = "et-xmlfile"
+version = "2.0.0"
+description = "An implementation of lxml.xmlfile for the standard library"
+optional = false
+python-versions = ">=3.8"
+files = [
+    {file = "et_xmlfile-2.0.0-py3-none-any.whl", hash = "sha256:7a91720bc756843502c3b7504c77b8fe44217c85c537d85037f0f536151b2caa"},
+    {file = "et_xmlfile-2.0.0.tar.gz", hash = "sha256:dab3f4764309081ce75662649be815c4c9081e88f0837825f90fd28317d4da54"},
+]
+
+[[package]]
+name = "fsspreadsheet"
+version = "6.2.0"
+description = "Fable library for Spreadsheet creation and manipulation"
+optional = false
+python-versions = "<4.0,>=3.11"
+files = [
+    {file = "fsspreadsheet-6.2.0-py3-none-any.whl", hash = "sha256:468fb01188e50f4044efdda0aaaaac0f70d6dae3d8cfe0c8f9c06515ab5ea921"},
+    {file = "fsspreadsheet-6.2.0.tar.gz", hash = "sha256:2015e12e877e879bccaccb5157b8a73607ea774b8605caf165efe3a62f238194"},
+]
+
+[package.dependencies]
+et-xmlfile = ">=1.1.0"
+openpyxl = ">=3.1.2"
+
+[[package]]
 name = "idna"
 version = "3.10"
 description = "Internationalized Domain Names in Applications (IDNA)"
@@ -106,6 +132,20 @@ files = [
 
 [package.dependencies]
 referencing = ">=0.31.0"
+
+[[package]]
+name = "openpyxl"
+version = "3.1.5"
+description = "A Python library to read/write Excel 2010 xlsx/xlsm files"
+optional = false
+python-versions = ">=3.8"
+files = [
+    {file = "openpyxl-3.1.5-py2.py3-none-any.whl", hash = "sha256:5282c12b107bffeef825f4617dc029afaf41d0ea60823bbb665ef3079dc79de2"},
+    {file = "openpyxl-3.1.5.tar.gz", hash = "sha256:cf0e3cf56142039133628b5acffe8ef0c12bc902d2aadd3e0fe5878dc08d1050"},
+]
+
+[package.dependencies]
+et-xmlfile = "*"
 
 [[package]]
 name = "referencing"
@@ -274,4 +314,4 @@ socks = ["PySocks (>=1.5.6,!=1.5.7,<2.0)"]
 [metadata]
 lock-version = "2.0"
 python-versions = "^3.12"
-content-hash = "5de527e993527fcc978147a1847851500cd612e38c8e9594e036d39347d722fe"
+content-hash = "8e435f78cafb41c060375aa9d3035032136a7df1fb8d420e9adbb595bed8bdfb"

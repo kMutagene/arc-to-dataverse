@@ -38,7 +38,6 @@ isa = load_inv_from_isa_rocrate_file(r'C:\Users\schne\source\repos\kMutagene\arc
 # loaded from an arc ro crate
 arc = load_arc_from_rocrate_file(r'C:\Users\schne\source\repos\kMutagene\arc-to-dataverse\arc-to-dataverse\arc-ro-crate-metadata.json')
 
-
 # print(arc.ISA)
 # print(isa)
 

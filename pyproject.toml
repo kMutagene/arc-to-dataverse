@@ -9,6 +9,7 @@ readme = "README.md"
 python = "^3.12"
 arctrl = "^2.2.0"
 jsonschema = "^4.23.0"
+fsspreadsheet = "^6.2.0"
 
 
 [build-system]
