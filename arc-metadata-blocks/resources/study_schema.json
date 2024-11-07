@@ -1,0 +1,124 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$defs": {
+    "DateTime": {
+      "type": "string"
+    }
+  },
+  "title": "ARC-ISA Studies",
+  "description": "JSON Schema representation of a list of ARC-ISA Studies. Made for the purpose of converting it to a TSV Dataverse metadata block.",
+  "type": "object",
+  "required": [
+    "study"
+  ],
+  "properties": {
+    "study": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "additionalType",
+          "identifier"
+        ],
+        "properties": {
+          "additionalType": {
+            "type": "string"
+          },
+          "identifier": {
+            "type": "string"
+          },
+          "about": {
+            "type": "object",
+            "required": [],
+            "properties": {
+              "executesLabProtocol": {
+                "type": "string"
+              },
+              "parameterValue": {
+                "type": "string"
+              }
+            },
+            "additionalProperties": false
+          },
+          "creator": {
+            "type": "object",
+            "required": [],
+            "properties": {
+              "givenName": {
+                "type": "string"
+              },
+              "familyName": {
+                "type": "string"
+              },
+              "email": {
+                "type": "string"
+              }
+            },
+            "additionalProperties": false
+          },
+          "dateCreated": {
+            "$ref": "#/$defs/DateTime"
+          },
+          "datePublished": {
+            "$ref": "#/$defs/DateTime"
+          },
+          "description": {
+            "type": "string"
+          },
+          "hasPart": {
+            "type": "object",
+            "required": [],
+            "properties": {
+              "contentSize": {
+                "type": "string"
+              },
+              "uploadDate": {
+                "$ref": "#/$defs/DateTime"
+              }
+            },
+            "additionalProperties": false
+          },
+          "headline": {
+            "type": "string"
+          },
+          "citation": {
+            "type": "object",
+            "required": [],
+            "properties": {
+              "articleBody": {
+                "type": "string"
+              },
+              "articleSection": {
+                "type": "string"
+              }
+            },
+            "additionalProperties": false
+          },
+          "comment": {
+            "type": "object",
+            "required": [],
+            "properties": {
+              "upvoteCount": {
+                "type": "integer"
+              },
+              "downvoteCount": {
+                "type": "integer"
+              },
+              "comment": {
+                "type": "string"
+              }
+            },
+            "additionalProperties": false
+          },
+          "dateModified": {
+            "$ref": "#/$defs/DateTime"
+          },
+          "url": {
+            "type": "string"
+          }
+        },
+        "additionalProperties": false
+      }
+    }
+  }
+}

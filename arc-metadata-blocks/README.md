@@ -2,7 +2,7 @@
 
 The script `json_schema_to_dataverse_tsv.py` can transform a JSON Schema to the type of TSV that defines a Dataverse metadata block (MDB). Usage example:
 
-`python scripts/json_schema_to_dataverse_tsv.py -n ExampleMdbName resources/example_schema.json`
+`python scripts/json_schema_to_dataverse_tsv.py -n Studies resources/study_schema.json`
 
 The resulting TSV can be given to a running Dataverse instance [as described here](https://guides.dataverse.org/en/latest/admin/metadatacustomization.html#loading-tsv-files-into-a-dataverse-installation).
 <details>
