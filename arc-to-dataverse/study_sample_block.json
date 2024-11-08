@@ -1,0 +1,1 @@
+{"study": [{"additionalType": "schema.org/Dataset", "identifier": "experiment1_material", "about": [{"parameterValue": [{"name": "testName", "value": "testValue"}]}]}, {"additionalType": "schema.org/Dataset", "identifier": "experiment2", "about": [{"parameterValue": [{"name": "testName", "value": "testValue"}]}]}]}
