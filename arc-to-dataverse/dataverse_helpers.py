@@ -1,7 +1,7 @@
 import sys
 
 MDS_MAIN_METADATA_BLOCK_NAME = "Studies"
-CONTROLLED_VOCAB_FIELDS = []
+CONTROLLED_VOCAB_FIELDS = ['subject']
 
 
 def convert_dict(d, type_name_prefix=""):

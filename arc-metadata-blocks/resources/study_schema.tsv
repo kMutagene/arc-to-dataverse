@@ -1,32 +1,32 @@
-#metadataBlock	name	dataverseAlias	displayName	blockURI
-	Studies		Studies	
-#datasetField	name	title	description	watermark	fieldType	displayOrder	displayFormat	advancedSearchField	allowControlledVocabulary	allowmultiples	facetable	displayoncreate	required	parent	metadatablock_id	termURI
-	Studies.study	Studies.study			none	0		FALSE	FALSE	TRUE	FALSE	TRUE	TRUE		Studies	
-	Studies.study.additionalType	Studies.study.additionalType			text	1		TRUE	FALSE	FALSE	FALSE	TRUE	TRUE	Studies.study	Studies	
-	Studies.study.identifier	Studies.study.identifier			text	2		TRUE	FALSE	FALSE	FALSE	TRUE	TRUE	Studies.study	Studies	
-	Studies.study.about	Studies.study.about			none	3		FALSE	FALSE	TRUE	FALSE	TRUE	FALSE	Studies.study	Studies	
-	Studies.study.about.executesLabProtocol	Studies.study.about.executesLabProtocol			text	4		TRUE	FALSE	FALSE	FALSE	TRUE	FALSE	Studies.study.about	Studies	
-	Studies.study.about.parameterValue	Studies.study.about.parameterValue			none	5		FALSE	FALSE	TRUE	FALSE	TRUE	TRUE	Studies.study.about	Studies	
-	Studies.study.about.parameterValue.name	Studies.study.about.parameterValue.name			text	6		TRUE	FALSE	FALSE	FALSE	TRUE	TRUE	Studies.study.about.parameterValue	Studies	
-	Studies.study.about.parameterValue.value	Studies.study.about.parameterValue.value			text	7		TRUE	FALSE	FALSE	FALSE	TRUE	TRUE	Studies.study.about.parameterValue	Studies	
-	Studies.study.creator	Studies.study.creator			none	8		FALSE	FALSE	FALSE	FALSE	TRUE	FALSE	Studies.study	Studies	
-	Studies.study.creator.givenName	Studies.study.creator.givenName			text	9		TRUE	FALSE	FALSE	FALSE	TRUE	FALSE	Studies.study.creator	Studies	
-	Studies.study.creator.familyName	Studies.study.creator.familyName			text	10		TRUE	FALSE	FALSE	FALSE	TRUE	FALSE	Studies.study.creator	Studies	
-	Studies.study.creator.email	Studies.study.creator.email			text	11		TRUE	FALSE	FALSE	FALSE	TRUE	FALSE	Studies.study.creator	Studies	
-	Studies.study.dateCreated	Studies.study.dateCreated			text	12		TRUE	FALSE	FALSE	FALSE	TRUE	FALSE	Studies.study	Studies	
-	Studies.study.datePublished	Studies.study.datePublished			text	13		TRUE	FALSE	FALSE	FALSE	TRUE	FALSE	Studies.study	Studies	
-	Studies.study.description	Studies.study.description			text	14		TRUE	FALSE	FALSE	FALSE	TRUE	FALSE	Studies.study	Studies	
-	Studies.study.hasPart	Studies.study.hasPart			none	15		FALSE	FALSE	FALSE	FALSE	TRUE	FALSE	Studies.study	Studies	
-	Studies.study.hasPart.contentSize	Studies.study.hasPart.contentSize			text	16		TRUE	FALSE	FALSE	FALSE	TRUE	FALSE	Studies.study.hasPart	Studies	
-	Studies.study.hasPart.uploadDate	Studies.study.hasPart.uploadDate			text	17		TRUE	FALSE	FALSE	FALSE	TRUE	FALSE	Studies.study.hasPart	Studies	
-	Studies.study.headline	Studies.study.headline			text	18		TRUE	FALSE	FALSE	FALSE	TRUE	FALSE	Studies.study	Studies	
-	Studies.study.citation	Studies.study.citation			none	19		FALSE	FALSE	FALSE	FALSE	TRUE	FALSE	Studies.study	Studies	
-	Studies.study.citation.articleBody	Studies.study.citation.articleBody			text	20		TRUE	FALSE	FALSE	FALSE	TRUE	FALSE	Studies.study.citation	Studies	
-	Studies.study.citation.articleSection	Studies.study.citation.articleSection			text	21		TRUE	FALSE	FALSE	FALSE	TRUE	FALSE	Studies.study.citation	Studies	
-	Studies.study.comment	Studies.study.comment			none	22		FALSE	FALSE	FALSE	FALSE	TRUE	FALSE	Studies.study	Studies	
-	Studies.study.comment.upvoteCount	Studies.study.comment.upvoteCount			int	23		TRUE	FALSE	FALSE	FALSE	TRUE	FALSE	Studies.study.comment	Studies	
-	Studies.study.comment.downvoteCount	Studies.study.comment.downvoteCount			int	24		TRUE	FALSE	FALSE	FALSE	TRUE	FALSE	Studies.study.comment	Studies	
-	Studies.study.comment.comment	Studies.study.comment.comment			text	25		TRUE	FALSE	FALSE	FALSE	TRUE	FALSE	Studies.study.comment	Studies	
-	Studies.study.dateModified	Studies.study.dateModified			text	26		TRUE	FALSE	FALSE	FALSE	TRUE	FALSE	Studies.study	Studies	
-	Studies.study.url	Studies.study.url			text	27		TRUE	FALSE	FALSE	FALSE	TRUE	FALSE	Studies.study	Studies	
-#controlledVocabulary	DatasetField	Value	identifier	displayOrder
+#metadataBlock	name	dataverseAlias	displayName	blockURI
+	Studies		Studies	
+#datasetField	name	title	description	watermark	fieldType	displayOrder	displayFormat	advancedSearchField	allowControlledVocabulary	allowmultiples	facetable	displayoncreate	required	parent	metadatablock_id	termURI
+	Studies.study	Studies.study			none	0		FALSE	FALSE	TRUE	FALSE	TRUE	TRUE		Studies	
+	Studies.study.additionalType	Studies.study.additionalType			text	1		TRUE	FALSE	FALSE	FALSE	TRUE	TRUE	Studies.study	Studies	
+	Studies.study.identifier	Studies.study.identifier			text	2		TRUE	FALSE	FALSE	FALSE	TRUE	TRUE	Studies.study	Studies	
+	Studies.study.about	Studies.study.about			none	3		FALSE	FALSE	TRUE	FALSE	TRUE	FALSE	Studies.study	Studies	
+	Studies.study.about.executesLabProtocol	Studies.study.about.executesLabProtocol			text	4		TRUE	FALSE	FALSE	FALSE	TRUE	FALSE	Studies.study.about	Studies	
+	Studies.study.about.parameterValue	Studies.study.about.parameterValue			none	5		FALSE	FALSE	TRUE	FALSE	TRUE	TRUE	Studies.study.about	Studies	
+	Studies.study.about.parameterValue.name	Studies.study.about.parameterValue.name			text	6		TRUE	FALSE	FALSE	FALSE	TRUE	TRUE	Studies.study.about.parameterValue	Studies	
+	Studies.study.about.parameterValue.value	Studies.study.about.parameterValue.value			text	7		TRUE	FALSE	FALSE	FALSE	TRUE	TRUE	Studies.study.about.parameterValue	Studies	
+	Studies.study.creator	Studies.study.creator			none	8		FALSE	FALSE	FALSE	FALSE	TRUE	FALSE	Studies.study	Studies	
+	Studies.study.creator.givenName	Studies.study.creator.givenName			text	9		TRUE	FALSE	FALSE	FALSE	TRUE	FALSE	Studies.study.creator	Studies	
+	Studies.study.creator.familyName	Studies.study.creator.familyName			text	10		TRUE	FALSE	FALSE	FALSE	TRUE	FALSE	Studies.study.creator	Studies	
+	Studies.study.creator.email	Studies.study.creator.email			text	11		TRUE	FALSE	FALSE	FALSE	TRUE	FALSE	Studies.study.creator	Studies	
+	Studies.study.dateCreated	Studies.study.dateCreated			text	12		TRUE	FALSE	FALSE	FALSE	TRUE	FALSE	Studies.study	Studies	
+	Studies.study.datePublished	Studies.study.datePublished			text	13		TRUE	FALSE	FALSE	FALSE	TRUE	FALSE	Studies.study	Studies	
+	Studies.study.description	Studies.study.description			text	14		TRUE	FALSE	FALSE	FALSE	TRUE	FALSE	Studies.study	Studies	
+	Studies.study.hasPart	Studies.study.hasPart			none	15		FALSE	FALSE	FALSE	FALSE	TRUE	FALSE	Studies.study	Studies	
+	Studies.study.hasPart.contentSize	Studies.study.hasPart.contentSize			text	16		TRUE	FALSE	FALSE	FALSE	TRUE	FALSE	Studies.study.hasPart	Studies	
+	Studies.study.hasPart.uploadDate	Studies.study.hasPart.uploadDate			text	17		TRUE	FALSE	FALSE	FALSE	TRUE	FALSE	Studies.study.hasPart	Studies	
+	Studies.study.headline	Studies.study.headline			text	18		TRUE	FALSE	FALSE	FALSE	TRUE	FALSE	Studies.study	Studies	
+	Studies.study.citation	Studies.study.citation			none	19		FALSE	FALSE	FALSE	FALSE	TRUE	FALSE	Studies.study	Studies	
+	Studies.study.citation.articleBody	Studies.study.citation.articleBody			text	20		TRUE	FALSE	FALSE	FALSE	TRUE	FALSE	Studies.study.citation	Studies	
+	Studies.study.citation.articleSection	Studies.study.citation.articleSection			text	21		TRUE	FALSE	FALSE	FALSE	TRUE	FALSE	Studies.study.citation	Studies	
+	Studies.study.comment	Studies.study.comment			none	22		FALSE	FALSE	FALSE	FALSE	TRUE	FALSE	Studies.study	Studies	
+	Studies.study.comment.upvoteCount	Studies.study.comment.upvoteCount			int	23		TRUE	FALSE	FALSE	FALSE	TRUE	FALSE	Studies.study.comment	Studies	
+	Studies.study.comment.downvoteCount	Studies.study.comment.downvoteCount			int	24		TRUE	FALSE	FALSE	FALSE	TRUE	FALSE	Studies.study.comment	Studies	
+	Studies.study.comment.comment	Studies.study.comment.comment			text	25		TRUE	FALSE	FALSE	FALSE	TRUE	FALSE	Studies.study.comment	Studies	
+	Studies.study.dateModified	Studies.study.dateModified			text	26		TRUE	FALSE	FALSE	FALSE	TRUE	FALSE	Studies.study	Studies	
+	Studies.study.url	Studies.study.url			text	27		TRUE	FALSE	FALSE	FALSE	TRUE	FALSE	Studies.study	Studies	
+#controlledVocabulary	DatasetField	Value	identifier	displayOrder

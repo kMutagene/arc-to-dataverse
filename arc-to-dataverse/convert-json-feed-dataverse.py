@@ -10,12 +10,12 @@ import time
 #   > 2nd JSON should work if it validates against the schema from which the Dataverse metadata block has been generated (via `arc-metadata-blocks/`)
 # 3. Feeds the converted data into the Dataverse API.
 
-citation_jsonfile = "test_dataverse_arc_csh.json"
-main_jsonfile = ""
+citation_jsonfile = "citation_sample_block.json"
+main_jsonfile = "study_sample_block.json"
 
 dataverse_url = ""
 dataverse_api_token = ""
-dataverse_block_name = "Studies"
+dataverse_collection_name = "studytest"
 
 
 def send_api_request(method, api_subpath, dv_url, dv_api_key, retry_attempt=0, **kwargs):
@@ -42,6 +42,6 @@ with open(main_jsonfile, "r") as infile:
 
 dataverse_data = build_json_for_create_api(main_data, citation_data)
 
-res = send_api_request("POST", "api/dataverses/%s/datasets" % dataverse_block_name, dataverse_url, dataverse_url, json=dataverse_data)
+res = send_api_request("POST", "api/dataverses/%s/datasets" % dataverse_collection_name, dataverse_url, dataverse_api_token, json=dataverse_data)
 
 print(res.status_code, res.json())
