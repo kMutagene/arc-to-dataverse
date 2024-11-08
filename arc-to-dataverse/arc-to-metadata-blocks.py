@@ -41,6 +41,14 @@ studies = [
         "additionalType": "schema.org/Dataset",
         "identifier": study.Identifier,
         "about": [
+            {
+                "parameterValue": [
+                    {
+                        "name": "testName",
+                        "value": "testValue"
+                    }
+                ]
+            }
         ]
     } 
     for study
@@ -54,3 +62,11 @@ print(study_block)
 print("\n")
 
 validate(study_block, study_schema)
+
+# write study block json file
+with open(r'C:\Users\schne\source\repos\kMutagene\arc-to-dataverse\arc-to-dataverse\study_sample_block.json', mode='w', encoding='utf-8') as outfile:
+    json.dump(study_block, outfile)
+
+# write study block json file
+with open(r'C:\Users\schne\source\repos\kMutagene\arc-to-dataverse\arc-to-dataverse\citation_sample_block.json', mode='w', encoding='utf-8') as outfile:
+    json.dump(citation_block, outfile)
