@@ -48,3 +48,47 @@ def first(iterable, condition = lambda x: True):
 
     return next(x for x in iterable if condition(x))
 
+def map_person_to_author(person:Person):
+    return {
+        "authorName": f'{person.FirstName} {person.LastName}',
+        "authorAffiliation": person.Affiliation if person.Affiliation else ""
+    }
+
+def get_contacts(persons: list[Person]):
+    return [
+        {
+            "datasetContactName": f'{person.FirstName} {person.LastName}',
+            "datasetContactEmail": person.EMail,
+            "datasetContactAffiliation": person.Affiliation
+        }
+        for person in persons 
+        if person.EMail
+    ]
+
+class Subject(Enum):
+    Agricultural_Sciences = "Agricultural Sciences"
+    Arts_and_Humanities = "Arts and Humanities"
+    Astronomy_and_Astrophysics = "Astronomy and Astrophysics"
+    Business_and_Management = "Business and Management"
+    Chemistry = "Chemistry"
+    Computer_and_Information_Science = "Computer and Information Science"
+    Earth_and_Environmental_Sciences = "Earth and Environmental Sciences"
+    Engineering = "Engineering"
+    Law = "Law"
+    Mathematical_Sciences = "Mathematical Sciences"
+    Medicine_Health_and_Life_Sciences = "Medicine, Health and Life Sciences"
+    Physics = "Physics"
+    Social_Sciences = "Social Sciences"
+    Other = "Other"
+
+def get_subjects(inv: ArcInvestigation):
+    subjects = [
+        comment.Value 
+        for comment in inv.Comments 
+        if comment.Name == "Subject"
+        and comment.Value in [subject.value for subject in Subject]
+    ]
+    if len(subjects) == 0:
+        return [Subject.Other.value]
+    else:
+        return subjects
