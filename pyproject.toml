@@ -11,6 +11,7 @@ jsonschema = "^4.23.0"
 fsspreadsheet = "^6.2.0"
 pydataverse = "^0.3.4"
 arctrl = "^2.2.2"
+python-dotenv = "^1.0.1"
 
 
 [build-system]

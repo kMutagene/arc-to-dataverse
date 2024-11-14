@@ -165,29 +165,64 @@
     ],
     "studies": [
       {
-        "@id": "#study/experiment1_material",
+        "@id": "#study/MaterialPreparation",
         "@type": [
           "Study"
         ],
         "additionalType": "Study",
-        "identifier": "experiment1_material",
-        "filename": "studies/experiment1_material/isa.study.xlsx",
+        "identifier": "MaterialPreparation",
+        "filename": "studies/MaterialPreparation/isa.study.xlsx",
         "title": "Prototype for experimental data",
         "description": "In this a devised study to have an exemplary experimental material description.",
         "processSequence": [
           {
-            "@id": "#Process_process_1",
+            "@id": "#Process_CellCultivation",
             "@type": [
               "Process"
             ],
-            "name": "process_1",
+            "name": "CellCultivation",
+            "executesProtocol": {
+              "@id": "#Protocol_MaterialPreparation_CellCultivation",
+              "@type": [
+                "Protocol"
+              ],
+              "protocolType": {
+                "@id": "https://bioregistry.io/EFO:0003789",
+                "@type": "OntologyAnnotation",
+                "annotationValue": "growth protocol",
+                "termSource": "EFO",
+                "termAccession": "https://bioregistry.io/EFO:0003789",
+                "@context": {
+                  "sdo": "http://schema.org/",
+                  "OntologyAnnotation": "sdo:DefinedTerm",
+                  "annotationValue": "sdo:name",
+                  "termSource": "sdo:inDefinedTermSet",
+                  "termAccession": "sdo:termCode",
+                  "comments": "sdo:disambiguatingDescription"
+                }
+              },
+              "@context": {
+                "sdo": "http://schema.org/",
+                "bio": "https://bioschemas.org/",
+                "Protocol": "bio:LabProtocol",
+                "name": "sdo:name",
+                "protocolType": "bio:intendedUse",
+                "description": "sdo:description",
+                "version": "sdo:version",
+                "components": "bio:labEquipment",
+                "reagents": "bio:reagent",
+                "computationalTools": "bio:computationalTool",
+                "uri": "sdo:url",
+                "comments": "sdo:comment"
+              }
+            },
             "inputs": [
               {
-                "@id": "#Source_RealObject1",
+                "@id": "#Source_Source1",
                 "@type": [
                   "Source"
                 ],
-                "name": "RealObject1",
+                "name": "Source1",
                 "characteristics": [
                   {
                     "@id": "#MaterialAttributeValue/organism=Arabidopsis thaliana",
@@ -245,11 +280,11 @@
                 }
               },
               {
-                "@id": "#Source_RealObject2",
+                "@id": "#Source_Source2",
                 "@type": [
                   "Source"
                 ],
-                "name": "RealObject2",
+                "name": "Source2",
                 "characteristics": [
                   {
                     "@id": "#MaterialAttributeValue/organism=Arabidopsis thaliana",
@@ -307,11 +342,11 @@
                 }
               },
               {
-                "@id": "#Source_RealObject3",
+                "@id": "#Source_Source3",
                 "@type": [
                   "Source"
                 ],
-                "name": "RealObject3",
+                "name": "Source3",
                 "characteristics": [
                   {
                     "@id": "#MaterialAttributeValue/organism=Arabidopsis thaliana",
@@ -369,11 +404,11 @@
                 }
               },
               {
-                "@id": "#Source_RealObject4",
+                "@id": "#Source_Source4",
                 "@type": [
                   "Source"
                 ],
-                "name": "RealObject4",
+                "name": "Source4",
                 "characteristics": [
                   {
                     "@id": "#MaterialAttributeValue/organism=Arabidopsis thaliana",
@@ -431,11 +466,11 @@
                 }
               },
               {
-                "@id": "#Source_RealObject5",
+                "@id": "#Source_Source5",
                 "@type": [
                   "Source"
                 ],
-                "name": "RealObject5",
+                "name": "Source5",
                 "characteristics": [
                   {
                     "@id": "#MaterialAttributeValue/organism=Arabidopsis thaliana",
@@ -493,11 +528,11 @@
                 }
               },
               {
-                "@id": "#Source_RealObject6",
+                "@id": "#Source_Source6",
                 "@type": [
                   "Source"
                 ],
-                "name": "RealObject6",
+                "name": "Source6",
                 "characteristics": [
                   {
                     "@id": "#MaterialAttributeValue/organism=Arabidopsis thaliana",
@@ -557,11 +592,11 @@
             ],
             "outputs": [
               {
-                "@id": "#Sample_Sample1",
+                "@id": "#Sample_Cultivation_Flask1",
                 "@type": [
                   "Sample"
                 ],
-                "name": "Sample1",
+                "name": "Cultivation Flask1",
                 "@context": {
                   "sdo": "http://schema.org/",
                   "bio": "https://bioschemas.org/",
@@ -571,11 +606,11 @@
                 }
               },
               {
-                "@id": "#Sample_Sample2",
+                "@id": "#Sample_Cultivation_Flask2",
                 "@type": [
                   "Sample"
                 ],
-                "name": "Sample2",
+                "name": "Cultivation Flask2",
                 "@context": {
                   "sdo": "http://schema.org/",
                   "bio": "https://bioschemas.org/",
@@ -585,11 +620,11 @@
                 }
               },
               {
-                "@id": "#Sample_Sample3",
+                "@id": "#Sample_Cultivation_Flask3",
                 "@type": [
                   "Sample"
                 ],
-                "name": "Sample3",
+                "name": "Cultivation Flask3",
                 "@context": {
                   "sdo": "http://schema.org/",
                   "bio": "https://bioschemas.org/",
@@ -599,11 +634,11 @@
                 }
               },
               {
-                "@id": "#Sample_Sample4",
+                "@id": "#Sample_Cultivation_Flask4",
                 "@type": [
                   "Sample"
                 ],
-                "name": "Sample4",
+                "name": "Cultivation Flask4",
                 "@context": {
                   "sdo": "http://schema.org/",
                   "bio": "https://bioschemas.org/",
@@ -613,11 +648,11 @@
                 }
               },
               {
-                "@id": "#Sample_Sample5",
+                "@id": "#Sample_Cultivation_Flask5",
                 "@type": [
                   "Sample"
                 ],
-                "name": "Sample5",
+                "name": "Cultivation Flask5",
                 "@context": {
                   "sdo": "http://schema.org/",
                   "bio": "https://bioschemas.org/",
@@ -627,11 +662,11 @@
                 }
               },
               {
-                "@id": "#Sample_Sample6",
+                "@id": "#Sample_Cultivation_Flask6",
                 "@type": [
                   "Sample"
                 ],
-                "name": "Sample6",
+                "name": "Cultivation Flask6",
                 "@context": {
                   "sdo": "http://schema.org/",
                   "bio": "https://bioschemas.org/",
@@ -656,11 +691,11 @@
             }
           },
           {
-            "@id": "#Process_process_2",
+            "@id": "#Process_AccessoryDataRetrieval",
             "@type": [
               "Process"
             ],
-            "name": "process_2",
+            "name": "AccessoryDataRetrieval",
             "inputs": [
               {
                 "@id": "#Sample_Sample1",
@@ -1014,233 +1049,6 @@
               "outputs": "sdo:result",
               "comments": "sdo:disambiguatingDescription"
             }
-          },
-          {
-            "@id": "#Process_Cell_Cultivation",
-            "@type": [
-              "Process"
-            ],
-            "name": "Cell Cultivation",
-            "executesProtocol": {
-              "@id": "#Protocol_experiment1_material_Cell_Cultivation",
-              "@type": [
-                "Protocol"
-              ],
-              "protocolType": {
-                "@id": "http://purl.obolibrary.org/obo/EFO_0003789",
-                "@type": "OntologyAnnotation",
-                "annotationValue": "growth protocol",
-                "termSource": "EFO",
-                "termAccession": "http://purl.obolibrary.org/obo/EFO_0003789",
-                "@context": {
-                  "sdo": "http://schema.org/",
-                  "OntologyAnnotation": "sdo:DefinedTerm",
-                  "annotationValue": "sdo:name",
-                  "termSource": "sdo:inDefinedTermSet",
-                  "termAccession": "sdo:termCode",
-                  "comments": "sdo:disambiguatingDescription"
-                }
-              },
-              "@context": {
-                "sdo": "http://schema.org/",
-                "bio": "https://bioschemas.org/",
-                "Protocol": "bio:LabProtocol",
-                "name": "sdo:name",
-                "protocolType": "bio:intendedUse",
-                "description": "sdo:description",
-                "version": "sdo:version",
-                "components": "bio:labEquipment",
-                "reagents": "bio:reagent",
-                "computationalTools": "bio:computationalTool",
-                "uri": "sdo:url",
-                "comments": "sdo:comment"
-              }
-            },
-            "inputs": [
-              {
-                "@id": "#Sample_Sample1",
-                "@type": [
-                  "Sample"
-                ],
-                "name": "Sample1",
-                "@context": {
-                  "sdo": "http://schema.org/",
-                  "bio": "https://bioschemas.org/",
-                  "Sample": "bio:Sample",
-                  "name": "sdo:name",
-                  "additionalProperties": "bio:additionalProperty"
-                }
-              },
-              {
-                "@id": "#Sample_Sample2",
-                "@type": [
-                  "Sample"
-                ],
-                "name": "Sample2",
-                "@context": {
-                  "sdo": "http://schema.org/",
-                  "bio": "https://bioschemas.org/",
-                  "Sample": "bio:Sample",
-                  "name": "sdo:name",
-                  "additionalProperties": "bio:additionalProperty"
-                }
-              },
-              {
-                "@id": "#Sample_Sample3",
-                "@type": [
-                  "Sample"
-                ],
-                "name": "Sample3",
-                "@context": {
-                  "sdo": "http://schema.org/",
-                  "bio": "https://bioschemas.org/",
-                  "Sample": "bio:Sample",
-                  "name": "sdo:name",
-                  "additionalProperties": "bio:additionalProperty"
-                }
-              },
-              {
-                "@id": "#Sample_Sample4",
-                "@type": [
-                  "Sample"
-                ],
-                "name": "Sample4",
-                "@context": {
-                  "sdo": "http://schema.org/",
-                  "bio": "https://bioschemas.org/",
-                  "Sample": "bio:Sample",
-                  "name": "sdo:name",
-                  "additionalProperties": "bio:additionalProperty"
-                }
-              },
-              {
-                "@id": "#Sample_Sample5",
-                "@type": [
-                  "Sample"
-                ],
-                "name": "Sample5",
-                "@context": {
-                  "sdo": "http://schema.org/",
-                  "bio": "https://bioschemas.org/",
-                  "Sample": "bio:Sample",
-                  "name": "sdo:name",
-                  "additionalProperties": "bio:additionalProperty"
-                }
-              },
-              {
-                "@id": "#Sample_Sample6",
-                "@type": [
-                  "Sample"
-                ],
-                "name": "Sample6",
-                "@context": {
-                  "sdo": "http://schema.org/",
-                  "bio": "https://bioschemas.org/",
-                  "Sample": "bio:Sample",
-                  "name": "sdo:name",
-                  "additionalProperties": "bio:additionalProperty"
-                }
-              }
-            ],
-            "outputs": [
-              {
-                "@id": "#Sample_Cultivation_Flask",
-                "@type": [
-                  "Sample"
-                ],
-                "name": "Cultivation Flask",
-                "@context": {
-                  "sdo": "http://schema.org/",
-                  "bio": "https://bioschemas.org/",
-                  "Sample": "bio:Sample",
-                  "name": "sdo:name",
-                  "additionalProperties": "bio:additionalProperty"
-                }
-              },
-              {
-                "@id": "#Sample_Cultivation_Flask",
-                "@type": [
-                  "Sample"
-                ],
-                "name": "Cultivation Flask",
-                "@context": {
-                  "sdo": "http://schema.org/",
-                  "bio": "https://bioschemas.org/",
-                  "Sample": "bio:Sample",
-                  "name": "sdo:name",
-                  "additionalProperties": "bio:additionalProperty"
-                }
-              },
-              {
-                "@id": "#Sample_Cultivation_Flask",
-                "@type": [
-                  "Sample"
-                ],
-                "name": "Cultivation Flask",
-                "@context": {
-                  "sdo": "http://schema.org/",
-                  "bio": "https://bioschemas.org/",
-                  "Sample": "bio:Sample",
-                  "name": "sdo:name",
-                  "additionalProperties": "bio:additionalProperty"
-                }
-              },
-              {
-                "@id": "#Sample_Cultivation_Flask",
-                "@type": [
-                  "Sample"
-                ],
-                "name": "Cultivation Flask",
-                "@context": {
-                  "sdo": "http://schema.org/",
-                  "bio": "https://bioschemas.org/",
-                  "Sample": "bio:Sample",
-                  "name": "sdo:name",
-                  "additionalProperties": "bio:additionalProperty"
-                }
-              },
-              {
-                "@id": "#Sample_Cultivation_Flask",
-                "@type": [
-                  "Sample"
-                ],
-                "name": "Cultivation Flask",
-                "@context": {
-                  "sdo": "http://schema.org/",
-                  "bio": "https://bioschemas.org/",
-                  "Sample": "bio:Sample",
-                  "name": "sdo:name",
-                  "additionalProperties": "bio:additionalProperty"
-                }
-              },
-              {
-                "@id": "#Sample_Cultivation_Flask",
-                "@type": [
-                  "Sample"
-                ],
-                "name": "Cultivation Flask",
-                "@context": {
-                  "sdo": "http://schema.org/",
-                  "bio": "https://bioschemas.org/",
-                  "Sample": "bio:Sample",
-                  "name": "sdo:name",
-                  "additionalProperties": "bio:additionalProperty"
-                }
-              }
-            ],
-            "@context": {
-              "sdo": "http://schema.org/",
-              "bio": "https://bioschemas.org/",
-              "Process": "bio:LabProcess",
-              "name": "sdo:name",
-              "executesProtocol": "bio:executesLabProtocol",
-              "parameterValues": "bio:parameterValue",
-              "performer": "sdo:agent",
-              "date": "sdo:endTime",
-              "inputs": "sdo:object",
-              "outputs": "sdo:result",
-              "comments": "sdo:disambiguatingDescription"
-            }
           }
         ],
         "assays": [
@@ -1254,11 +1062,11 @@
             "filename": "assays/measurement1/isa.assay.xlsx",
             "performers": [
               {
-                "@id": "mailto:maus@nfdi4plants.org",
+                "@id": "maus@nfdi4plants.org",
                 "@type": "Person",
                 "firstName": "Oliver",
                 "lastName": "Maus",
-                "email": "mailto:maus@nfdi4plants.org",
+                "email": "maus@nfdi4plants.org",
                 "affiliation": {
                   "@type": "Organization",
                   "@id": "#Organization_RPTU_University_of_Kaiserslautern",
@@ -1639,7 +1447,7 @@
                 ],
                 "name": "Cell Lysis",
                 "executesProtocol": {
-                  "@id": "#Protocol_experiment1_material_measurement1_Cell_Lysis",
+                  "@id": "#Protocol_MaterialPreparation_measurement1_Cell_Lysis",
                   "@type": [
                     "Protocol"
                   ],
@@ -1759,11 +1567,11 @@
                 ],
                 "inputs": [
                   {
-                    "@id": "#Sample_Cultivation_flask",
+                    "@id": "#Sample_Cultivation_Flask1",
                     "@type": [
                       "Sample"
                     ],
-                    "name": "Cultivation flask",
+                    "name": "Cultivation Flask1",
                     "@context": {
                       "sdo": "http://schema.org/",
                       "bio": "https://bioschemas.org/",
@@ -1773,11 +1581,11 @@
                     }
                   },
                   {
-                    "@id": "#Sample_Cultivation_flask",
+                    "@id": "#Sample_Cultivation_Flask2",
                     "@type": [
                       "Sample"
                     ],
-                    "name": "Cultivation flask",
+                    "name": "Cultivation Flask2",
                     "@context": {
                       "sdo": "http://schema.org/",
                       "bio": "https://bioschemas.org/",
@@ -1787,11 +1595,11 @@
                     }
                   },
                   {
-                    "@id": "#Sample_Cultivation_flask",
+                    "@id": "#Sample_Cultivation_Flask3",
                     "@type": [
                       "Sample"
                     ],
-                    "name": "Cultivation flask",
+                    "name": "Cultivation Flask3",
                     "@context": {
                       "sdo": "http://schema.org/",
                       "bio": "https://bioschemas.org/",
@@ -1801,11 +1609,11 @@
                     }
                   },
                   {
-                    "@id": "#Sample_Cultivation_flask",
+                    "@id": "#Sample_Cultivation_Flask4",
                     "@type": [
                       "Sample"
                     ],
-                    "name": "Cultivation flask",
+                    "name": "Cultivation Flask4",
                     "@context": {
                       "sdo": "http://schema.org/",
                       "bio": "https://bioschemas.org/",
@@ -1815,11 +1623,11 @@
                     }
                   },
                   {
-                    "@id": "#Sample_Cultivation_flask",
+                    "@id": "#Sample_Cultivation_Flask5",
                     "@type": [
                       "Sample"
                     ],
-                    "name": "Cultivation flask",
+                    "name": "Cultivation Flask5",
                     "@context": {
                       "sdo": "http://schema.org/",
                       "bio": "https://bioschemas.org/",
@@ -1829,11 +1637,11 @@
                     }
                   },
                   {
-                    "@id": "#Sample_Cultivation_flask",
+                    "@id": "#Sample_Cultivation_Flask6",
                     "@type": [
                       "Sample"
                     ],
-                    "name": "Cultivation flask",
+                    "name": "Cultivation Flask6",
                     "@context": {
                       "sdo": "http://schema.org/",
                       "bio": "https://bioschemas.org/",
@@ -2163,7 +1971,7 @@
                 ],
                 "name": "Protein Measurement",
                 "executesProtocol": {
-                  "@id": "#Protocol_experiment1_material_measurement1_Protein_Measurement",
+                  "@id": "#Protocol_MaterialPreparation_measurement1_Protein_Measurement",
                   "@type": [
                     "Protocol"
                   ],
@@ -2998,7 +2806,7 @@
                 "category": "protein assay",
                 "categoryCode": "EFO:0001458",
                 "value": "SDS-PAGE",
-                "valueCode": "http://purl.obolibrary.org/obo/EFO_0010936",
+                "valueCode": "https://bioregistry.io/EFO:0010936",
                 "@context": {
                   "sdo": "http://schema.org/",
                   "additionalType": "sdo:additionalType",

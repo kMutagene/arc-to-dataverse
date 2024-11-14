@@ -1,6 +1,9 @@
 from arctrl.arc import ARC
-from arctrl.Core import Process, Table
+from arctrl.Core import Process, Table, conversion
+from arctrl.Core.Process import process
 from arctrl.Core.arc_types import Person, ArcInvestigation, ArcStudy, ArcTable
+from arctrl.Core.Process.material_attribute_value import MaterialAttributeValue__get_ValueText, MaterialAttributeValue__get_NameText
+from arctrl.Core.Process.process_parameter_value import ProcessParameterValue
 from jsonschema import validate
 import json
 
@@ -20,20 +23,26 @@ citation["dsDescription"] = [{"dsDescriptionValue": arc.ISA.Description}]
 citation["subject"] = domain.get_subjects(arc.ISA)
 citation_block["citation"] = citation
 
-print("\nCitation:\n")
-print(citation_block)
-print("\n")
-
-validate(citation_block, citation_schema)
-
-# def get_process_sequence(study: ArcStudy):
-#     return [
-#         # how to get process sequence? ask lukas
-
-#         ArcTable.GetP
-#         for process
-#         in study.Tables
-#     ]
+def get_process_parameters(study: ArcStudy):
+    result = []
+    for p in conversion.ARCtrl_ArcTables__ArcTables_GetProcesses(study):
+        characs = process.Process_getCharacteristicValues_763471FF(p)
+        for c in characs:
+            result.append(
+                {
+                    "name": MaterialAttributeValue__get_NameText(c),
+                    "value": MaterialAttributeValue__get_ValueText(c)
+                }
+            )
+        params = process.Process_getParameterValues_763471FF(p)
+        for p in params:
+            result.append(
+                {
+                    "name": p.NameText,
+                    "value": p.ValueText
+                }
+            )
+    return result
 
 study_block = {}
 studies = [
@@ -42,12 +51,7 @@ studies = [
         "identifier": study.Identifier,
         "about": [
             {
-                "parameterValue": [
-                    {
-                        "name": "testName",
-                        "value": "testValue"
-                    }
-                ]
+                "parameterValue": get_process_parameters(study)
             }
         ]
     } 
