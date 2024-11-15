@@ -12,6 +12,7 @@ fsspreadsheet = "^6.2.0"
 pydataverse = "^0.3.4"
 arctrl = "^2.2.2"
 python-dotenv = "^1.0.1"
+typer = "^0.13.0"
 
 
 [build-system]

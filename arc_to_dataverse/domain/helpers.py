@@ -1,6 +1,9 @@
 from arctrl.arc import ARC
-from arctrl.Core.arc_types import Person, ArcInvestigation
+from arctrl.Core import conversion
 from arctrl.json import JsonController
+from arctrl.Core.Process import process
+from arctrl.Core.arc_types import Person, ArcInvestigation, ArcStudy
+from arctrl.Core.Process.material_attribute_value import MaterialAttributeValue__get_ValueText, MaterialAttributeValue__get_NameText
 
 import json
 from enum import Enum
@@ -25,6 +28,11 @@ def load_std_from_isa_rocrate_file (file_path):
     """Load Study from a RO-Crate file conforming to the ISA ro-crate profile."""
     with open(file_path, mode='r', encoding='utf-8') as f:
         return JsonController.Study().from_rocrate_json_string(f.read())
+
+def write_json_to_file(data, file_path):
+    """Write JSON data to a file."""
+    with open(file_path, mode='w', encoding='utf-8') as outfile:
+        json.dump(data, outfile)
 
 def first(iterable, condition = lambda x: True):
     """
@@ -92,3 +100,24 @@ def get_subjects(inv: ArcInvestigation):
         return [Subject.Other.value]
     else:
         return subjects
+
+def get_process_parameters(study: ArcStudy):
+    result = []
+    for p in conversion.ARCtrl_ArcTables__ArcTables_GetProcesses(study):
+        characs = process.Process_getCharacteristicValues_763471FF(p)
+        for c in characs:
+            result.append(
+                {
+                    "name": MaterialAttributeValue__get_NameText(c),
+                    "value": MaterialAttributeValue__get_ValueText(c)
+                }
+            )
+        params = process.Process_getParameterValues_763471FF(p)
+        for p in params:
+            result.append(
+                {
+                    "name": p.NameText,
+                    "value": p.ValueText
+                }
+            )
+    return result
